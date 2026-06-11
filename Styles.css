@@ -126,20 +126,15 @@ body {
 }
 
 /*patients feedback styles*/
-/* ==========================================
-   FEEDBACK SECTION STYLES
-   ========================================== */
 
-/* Main container with a soft background to separate it from the page body */
 .feedbackSection {
     padding: 60px 20px;
     text-align: center;
     background-color: #f9fbf9; 
 }
 
-/* Headings */
 .feedbackSection .title {
-    color: #1e7e34; /* Dark brand green */
+    color: #1e7e34;
     font-size: 36px;
     margin-top: 0;
     margin-bottom: 10px;
@@ -151,7 +146,6 @@ body {
     margin-bottom: 50px;
 }
 
-/* Flexbox grid to line the cards up neatly */
 .feedbackGrid {
     display: flex;
     flex-wrap: wrap;
@@ -161,25 +155,22 @@ body {
     margin: 0 auto;
 }
 
-/* The individual review cards */
 .feedbackCard {
     background-color: #ffffff;
     padding: 30px;
     border-radius: 12px;
     width: 300px; 
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
-    border-bottom: 5px solid #28a745; /* Green accent at the bottom */
+    border-bottom: 5px solid #28a745;
     transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
 }
 
-/* Hover effect */
 .feedbackCard:hover {
     transform: translateY(-0.5px); 
-    border-bottom: 5px solid #fdfd96; /* Lemon yellow pop */
-    box-shadow: 0 8px 20px rgba(40, 167, 69, 0.1); /* Adds a slight green glow to the shadow */
+    border-bottom: 5px solid #fdfd96;
+    box-shadow: 0 8px 20px rgba(40, 167, 69, 0.1);
 }
 
-/* The review title (The new h3 tag) */
 .feedbackCard h3 {
     color: #28a745;
     font-size: 20px;
@@ -187,16 +178,14 @@ body {
     margin-bottom: 15px;
 }
 
-/* The actual review text */
 .feedbackCard .quote {
     color: #555;
-    font-style: italic; /* Keeps it looking like a spoken quote */
+    font-style: italic;
     line-height: 1.6;
     font-size: 15px;
     margin-bottom: 20px;
 }
 
-/* The patient's name */
 .feedbackCard .patientName {
     color: #1e7e34;
     font-weight: bold;
