@@ -33,6 +33,12 @@ body {
     background-color: #1e7e34;
 }
 
+.active a {
+    background: rgba(255,255,255,0.2);
+    color: white;
+    border-radius: 25px;
+    padding: 10px 20px;
+}
 /*Styles for service cards*/
 
 .services {
