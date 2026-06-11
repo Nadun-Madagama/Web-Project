@@ -90,7 +90,7 @@ body {
 }
 
 /*register button styles*/
-#NewRecipie {
+#Register {
     background-color: #28a745;
     color: white;
     padding: 15px 30px;
@@ -101,20 +101,18 @@ body {
     bottom: 20px;
     right: 20px;
     z-index: 1000;
-    
-    /* NEW: Adds a default shadow and smooths out all animations */
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
-    transition: all 0.3s ease; 
+    transition: all 0.3s ease;
 }
 
-#NewRecipie:hover {
+#Register:hover {
     background-color: #fdfd96;
     color: rgba(63, 60, 60, 0.793);
     box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
     transform: translateY(-4px);
 }
 
-#NewRecipie:active {
+#Register:active {
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
     background-color: #fdfd9695;
     transform: translateY(2px);
@@ -125,3 +123,83 @@ body {
     width: 100%;
     height: 60vh;
     object-fit: cover;
+}
+
+/*patients feedback styles*/
+/* ==========================================
+   FEEDBACK SECTION STYLES
+   ========================================== */
+
+/* Main container with a soft background to separate it from the page body */
+.feedbackSection {
+    padding: 60px 20px;
+    text-align: center;
+    background-color: #f9fbf9; 
+}
+
+/* Headings */
+.feedbackSection .title {
+    color: #1e7e34; /* Dark brand green */
+    font-size: 36px;
+    margin-top: 0;
+    margin-bottom: 10px;
+}
+
+.feedbackSection .subtitle {
+    color: #555;
+    font-size: 18px;
+    margin-bottom: 50px;
+}
+
+/* Flexbox grid to line the cards up neatly */
+.feedbackGrid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    justify-content: center;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* The individual review cards */
+.feedbackCard {
+    background-color: #ffffff;
+    padding: 30px;
+    border-radius: 12px;
+    width: 300px; 
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+    border-bottom: 5px solid #28a745; /* Green accent at the bottom */
+    transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Hover effect */
+.feedbackCard:hover {
+    transform: translateY(-0.5px); 
+    border-bottom: 5px solid #fdfd96; /* Lemon yellow pop */
+    box-shadow: 0 8px 20px rgba(40, 167, 69, 0.1); /* Adds a slight green glow to the shadow */
+}
+
+/* The review title (The new h3 tag) */
+.feedbackCard h3 {
+    color: #28a745;
+    font-size: 20px;
+    margin-top: 0;
+    margin-bottom: 15px;
+}
+
+/* The actual review text */
+.feedbackCard .quote {
+    color: #555;
+    font-style: italic; /* Keeps it looking like a spoken quote */
+    line-height: 1.6;
+    font-size: 15px;
+    margin-bottom: 20px;
+}
+
+/* The patient's name */
+.feedbackCard .patientName {
+    color: #1e7e34;
+    font-weight: bold;
+    font-size: 16px;
+    margin: 0;
+}
