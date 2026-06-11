@@ -6,9 +6,9 @@ body {
 }
 
 .topBar {
-    background-color: #28a745;
+    background-color: #2c3e50;
     padding: 15px 0;
-    box-shadow: 0 4px 10px rgba(40, 167, 69, 0.2);
+    box-shadow: 0 4px 10px rgba(44, 62, 80, 0.2);
 }
 
 .pageLinks {
@@ -30,7 +30,7 @@ body {
 }
 
 .pageLinks a:hover {
-    background-color: #1e7e34;
+    background-color: #1a252f;
 }
 
 /*Styles for service cards*/
@@ -43,7 +43,7 @@ body {
 }
 
 .services h2 {
-    color: #1e7e34; 
+    color: #1a252f; 
     font-size: 36px;
     margin-bottom: 10px;
 }
@@ -63,7 +63,7 @@ body {
 
 .serviceCard {
     background-color: #ffffff; 
-    border-top: 5px solid #28a745; 
+    border-top: 5px solid #2c3e50; 
     border-radius: 10px;
     padding: 30px;
     width: 260px; 
@@ -74,11 +74,11 @@ body {
 .serviceCard:hover {
     transform: translateY(-10px); 
     border-top: 5px solid #fdfd96; 
-    box-shadow: 0 12px 20px rgba(40, 167, 69, 0.15);
+    box-shadow: 0 12px 20px rgba(44, 62, 80, 0.15);
 }
 
 .serviceCard h3 {
-    color: #28a745;
+    color: #2c3e50;
     margin-top: 0;
     font-size: 22px;
 }
@@ -91,7 +91,7 @@ body {
 
 /*register button styles*/
 #Register {
-    background-color: #28a745;
+    background-color: #2c3e50f8;
     color: white;
     padding: 15px 30px;
     border: none;
@@ -106,8 +106,8 @@ body {
 }
 
 #Register:hover {
-    background-color: #fdfd96;
-    color: rgba(63, 60, 60, 0.793);
+    background-color: #acd0f3f8;
+    color: rgba(13, 4, 82, 0.793);
     box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
     transform: translateY(-4px);
 }
@@ -117,7 +117,6 @@ body {
     background-color: #fdfd9695;
     transform: translateY(2px);
 }
-
 
 .topImage {
     width: 100%;
@@ -130,11 +129,11 @@ body {
 .feedbackSection {
     padding: 60px 20px;
     text-align: center;
-    background-color: #f9fbf9; 
+    background-color: #f0f4f8; 
 }
 
 .feedbackSection .title {
-    color: #1e7e34;
+    color: #1a252f;
     font-size: 36px;
     margin-top: 0;
     margin-bottom: 10px;
@@ -161,18 +160,18 @@ body {
     border-radius: 12px;
     width: 300px; 
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
-    border-bottom: 5px solid #28a745;
+    border-bottom: 5px solid #2c3e50;
     transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
 }
 
 .feedbackCard:hover {
     transform: translateY(-0.5px); 
     border-bottom: 5px solid #fdfd96;
-    box-shadow: 0 8px 20px rgba(40, 167, 69, 0.1);
+    box-shadow: 0 8px 20px rgba(44, 62, 80, 0.1);
 }
 
 .feedbackCard h3 {
-    color: #28a745;
+    color: #2c3e50;
     font-size: 20px;
     margin-top: 0;
     margin-bottom: 15px;
@@ -187,7 +186,7 @@ body {
 }
 
 .feedbackCard .patientName {
-    color: #1e7e34;
+    color: #1a252f;
     font-weight: bold;
     font-size: 16px;
     margin: 0;
@@ -195,7 +194,7 @@ body {
 
 /*stats section styles*/
 .statsList {
-    background-color: #28a745; 
+    background-color: #2c3e50; 
     padding: 60px 20px;
     display: flex;
     flex-wrap: wrap; 
@@ -210,20 +209,19 @@ body {
 }
 
 .statItem .number {
-    color: #fdfd96; 
+    color: #eee8d5; 
     font-size: 40px;
     margin: 0;
     font-weight: bold;
 }
 
 .statItem .number:hover {
-    color: #fdfd96; 
+    color: #eee8d5; 
     font-size: 40px;
     margin: 0;
     font-weight: bold;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2); 
 }
-
 
 .statItem .description {
     color: #fffffff7; 
@@ -233,4 +231,68 @@ body {
     font-weight: bold;
     text-transform: uppercase; 
     letter-spacing: 1px; 
+}
+
+/*footer*/
+
+.footer {
+    background-color: #2c3e50;
+    padding: 60px 40px 20px 40px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap: 40px;
+}
+
+.footerColumn {
+    flex: 1;
+    min-width: 250px; 
+    max-width: 400px;
+}
+
+.footerTitle {
+    color: #fdfd96;
+    font-size: 22px;
+    margin-top: 0;
+    margin-bottom: 15px;
+}
+
+.footerText {
+    color: #eee8d5;
+    line-height: 1.8;
+    font-size: 16px;
+    margin: 0;
+}
+
+.footerBottom {
+    width: 100%;
+    text-align: center;
+    margin-top: 40px;
+    padding-top: 20px;
+    border-top: 1px solid rgba(238, 232, 213, 0.15);
+}
+
+.footerBottom p {
+    color: #eee8d5;
+    font-size: 14px;
+    margin: 0;
+}
+
+.footerLink {
+    display: inline-block;
+    background-color: #fdfd96;
+    color: #1a252f;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: bold;
+    padding: 10px 24px;
+    border-radius: 8px;
+    margin-top: 10px;
+    transition: background-color 0.3s ease;
+}
+
+.footerLink:hover {
+    background-color: #eee8d5;
+    transform: translateY(-1px); /* Lifts up slightly */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
 }
