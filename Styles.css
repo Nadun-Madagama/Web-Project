@@ -68,11 +68,13 @@ body {
     padding: 30px;
     width: 260px; 
     transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
 }
 
 .serviceCard:hover {
     transform: translateY(-10px); 
     border-top: 5px solid #fdfd96; 
+    box-shadow: 0 12px 20px rgba(40, 167, 69, 0.15);
 }
 
 .serviceCard h3 {
@@ -88,15 +90,32 @@ body {
 }
 
 /*register button styles*/
-Button {
+#NewRecipie {
     background-color: #28a745;
     color: white;
     padding: 15px 30px;
     border: none;
     border-radius: 15px;
     cursor: pointer;
-    position:fixed;
+    position: fixed;
     bottom: 20px;
     right: 20px;
     z-index: 1000;
+    
+    /* NEW: Adds a default shadow and smooths out all animations */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease; 
+}
+
+#NewRecipie:hover {
+    background-color: #fdfd96;
+    color: rgba(63, 60, 60, 0.793);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+    transform: translateY(-4px);
+}
+
+#NewRecipie:active {
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    background-color: #fdfd9695;
+    transform: translateY(2px);
 }
