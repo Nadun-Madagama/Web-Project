@@ -1,0 +1,437 @@
+/* register.css - Styles for register.html */
+/* Uses the same color theme as Styles.css */
+
+/* Page Header */
+.pageHeader {
+    background-color: #2c3e50;
+    color: white;
+    text-align: center;
+    padding: 50px 20px 40px 20px;
+}
+
+.pageHeader h1 {
+    font-size: 36px;
+    margin: 0 0 10px 0;
+    color: #fdfd96;
+}
+
+.pageHeader p {
+    font-size: 18px;
+    color: #eee8d5;
+    margin: 0;
+}
+
+/* Progress Bar */
+.progressBar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 30px 20px;
+    background-color: #f0f4f8;
+    flex-wrap: wrap;
+    gap: 5px;
+}
+
+.step {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+    color: #aaa;
+    font-size: 13px;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    transition: color 0.3s ease;
+}
+
+.step.active {
+    color: #2c3e50;
+}
+
+.step.done {
+    color: #2c3e50;
+}
+
+.stepCircle {
+    width: 38px;
+    height: 38px;
+    border-radius: 50%;
+    background-color: #ddd;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 16px;
+    font-weight: bold;
+    color: #aaa;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.step.active .stepCircle {
+    background-color: #2c3e50;
+    color: #fdfd96;
+}
+
+.step.done .stepCircle {
+    background-color: #2c3e50;
+    color: white;
+}
+
+.stepLine {
+    width: 60px;
+    height: 2px;
+    background-color: #ddd;
+    margin-bottom: 24px;
+}
+
+/* Form Container */
+.formContainer {
+    max-width: 750px;
+    margin: 40px auto;
+    padding: 0 20px 60px 20px;
+}
+
+/* Form Step */
+.formStep {
+    background-color: #ffffff;
+    border-radius: 12px;
+    padding: 40px;
+    box-shadow: 0 4px 15px rgba(44, 62, 80, 0.1);
+    border-top: 5px solid #2c3e50;
+}
+
+.formStep.hidden {
+    display: none;
+}
+
+.stepTitle {
+    color: #1a252f;
+    font-size: 26px;
+    margin: 0 0 8px 0;
+}
+
+.stepSubtitle {
+    color: #555;
+    font-size: 16px;
+    margin: 0 0 30px 0;
+}
+
+/* Form Grid (two columns) */
+.formGrid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+.fullWidth {
+    grid-column: 1 / -1;
+}
+
+/* Form Group */
+.formGroup {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    margin-bottom: 5px;
+}
+
+.formGroup label {
+    font-size: 14px;
+    font-weight: bold;
+    color: #1a252f;
+}
+
+.formGroup input,
+.formGroup select,
+.formGroup textarea {
+    padding: 11px 14px;
+    border: 1.5px solid #ccc;
+    border-radius: 8px;
+    font-size: 15px;
+    color: #333;
+    background-color: #fafafa;
+    transition: border-color 0.3s ease;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.formGroup input:focus,
+.formGroup select:focus,
+.formGroup textarea:focus {
+    outline: none;
+    border-color: #2c3e50;
+    background-color: #fff;
+}
+
+.formGroup input.inputError,
+.formGroup select.inputError,
+.formGroup textarea.inputError {
+    border-color: #e74c3c;
+}
+
+.formGroup textarea {
+    resize: vertical;
+    min-height: 90px;
+}
+
+.required {
+    color: #e74c3c;
+}
+
+.errorMsg {
+    color: #e74c3c;
+    font-size: 12px;
+    display: none;
+}
+
+.helperText {
+    color: #888;
+    font-size: 12px;
+}
+
+/* Checkbox Group */
+.checkboxGroup {
+    flex-direction: row;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 20px;
+    flex-wrap: wrap;
+}
+
+.checkboxGroup input[type="checkbox"] {
+    width: 18px;
+    height: 18px;
+    cursor: pointer;
+    padding: 0;
+    border: none;
+}
+
+.checkboxGroup label {
+    font-size: 15px;
+    color: #333;
+    cursor: pointer;
+}
+
+.checkboxGroup .errorMsg {
+    width: 100%;
+    margin-top: -5px;
+}
+
+/* Button Row */
+.btnRow {
+    display: flex;
+    justify-content: flex-end;
+    gap: 15px;
+    margin-top: 30px;
+}
+
+.btnNext {
+    background-color: #2c3e50;
+    color: white;
+    border: none;
+    padding: 12px 28px;
+    border-radius: 8px;
+    font-size: 15px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.btnNext:hover {
+    background-color: #1a252f;
+    transform: translateY(-2px);
+}
+
+.btnBack {
+    background-color: transparent;
+    color: #2c3e50;
+    border: 2px solid #2c3e50;
+    padding: 12px 28px;
+    border-radius: 8px;
+    font-size: 15px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.btnBack:hover {
+    background-color: #eee8d5;
+}
+
+.btnSubmit {
+    background-color: #2c3e50;
+    color: #fdfd96;
+    border: none;
+    padding: 12px 28px;
+    border-radius: 8px;
+    font-size: 15px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.btnSubmit:hover {
+    background-color: #1a252f;
+    transform: translateY(-2px);
+}
+
+/* Doctor Cards */
+.doctorList {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+.doctorCard {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+    padding: 18px 20px;
+    border: 2px solid #ddd;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+    background-color: #fafafa;
+}
+
+.doctorCard:hover {
+    border-color: #2c3e50;
+    box-shadow: 0 4px 12px rgba(44, 62, 80, 0.1);
+}
+
+.doctorCard.selected {
+    border-color: #2c3e50;
+    background-color: #f0f4f8;
+    box-shadow: 0 4px 12px rgba(44, 62, 80, 0.15);
+}
+
+.doctorAvatar {
+    width: 52px;
+    height: 52px;
+    border-radius: 50%;
+    background-color: #2c3e50;
+    color: #fdfd96;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 20px;
+    font-weight: bold;
+    flex-shrink: 0;
+}
+
+.doctorInfo h4 {
+    margin: 0 0 4px 0;
+    color: #1a252f;
+    font-size: 17px;
+}
+
+.doctorInfo p {
+    margin: 0;
+    color: #666;
+    font-size: 14px;
+}
+
+.doctorBadge {
+    margin-left: auto;
+    background-color: #eee8d5;
+    color: #2c3e50;
+    font-size: 12px;
+    font-weight: bold;
+    padding: 4px 10px;
+    border-radius: 20px;
+    flex-shrink: 0;
+}
+
+/* Summary Box */
+.summaryBox {
+    background-color: #f0f4f8;
+    border-radius: 10px;
+    padding: 25px 30px;
+    margin-bottom: 25px;
+}
+
+.summaryRow {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 0;
+    border-bottom: 1px solid #ddd;
+    font-size: 15px;
+    flex-wrap: wrap;
+    gap: 5px;
+}
+
+.summaryRow:last-child {
+    border-bottom: none;
+}
+
+.summaryLabel {
+    color: #555;
+    font-weight: bold;
+}
+
+.summaryValue {
+    color: #1a252f;
+    text-align: right;
+}
+
+/* Success Box */
+.successBox {
+    text-align: center;
+    padding: 20px 0;
+}
+
+.successIcon {
+    width: 70px;
+    height: 70px;
+    background-color: #2c3e50;
+    color: #fdfd96;
+    border-radius: 50%;
+    font-size: 36px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 20px auto;
+}
+
+.successBox h2 {
+    color: #1a252f;
+    font-size: 28px;
+    margin: 0 0 12px 0;
+}
+
+.successBox p {
+    color: #555;
+    font-size: 16px;
+    margin: 0 0 10px 0;
+}
+
+.successNote {
+    color: #888;
+    font-size: 14px;
+    font-style: italic;
+    margin-bottom: 30px !important;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+    .formGrid {
+        grid-template-columns: 1fr;
+    }
+
+    .formStep {
+        padding: 25px 20px;
+    }
+
+    .stepLine {
+        width: 25px;
+    }
+
+    .btnRow {
+        flex-direction: column;
+    }
+
+    .btnBack, .btnNext, .btnSubmit {
+        width: 100%;
+        text-align: center;
+    }
+}

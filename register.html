@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>E-Channeling | Register</title>
+        <link rel="stylesheet" href="Styles.css">
+        <link rel="stylesheet" href="register.css">
+    </head>
+    <body>
+
+        <!-- Top Bar -->
+        <nav class="topBar">
+            <ul class="pageLinks">
+                <li><a href="index.html#doctors">Doctors</a></li>
+                <li><a href="index.html#diseases">Diseases</a></li>
+                <li class="active"><a href="register.html">Register</a></li>
+                <li><a href="index.html#docdash">DocDash</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+            </ul>
+        </nav>
+        <!-- End of Top Bar -->
+
+        <!-- Page Header -->
+        <div class="pageHeader">
+            <h1>Book an Appointment</h1>
+            <p>Fill in your details below to register and schedule your visit.</p>
+        </div>
+
+        <!-- Progress Steps -->
+        <div class="progressBar">
+            <div class="step active" id="step1Indicator">
+                <div class="stepCircle">1</div>
+                <span>Personal Info</span>
+            </div>
+            <div class="stepLine"></div>
+            <div class="step" id="step2Indicator">
+                <div class="stepCircle">2</div>
+                <span>Select Specialty</span>
+            </div>
+            <div class="stepLine"></div>
+            <div class="step" id="step3Indicator">
+                <div class="stepCircle">3</div>
+                <span>Choose Doctor</span>
+            </div>
+            <div class="stepLine"></div>
+            <div class="step" id="step4Indicator">
+                <div class="stepCircle">4</div>
+                <span>Confirm</span>
+            </div>
+        </div>
+
+        <!-- Form Container -->
+        <div class="formContainer">
+
+            <!-- Step 1: Personal Information -->
+            <div class="formStep" id="step1">
+                <h2 class="stepTitle">Personal Information</h2>
+                <p class="stepSubtitle">Tell us a bit about yourself.</p>
+
+                <div class="formGrid">
+                    <div class="formGroup">
+                        <label for="firstName">First Name <span class="required">*</span></label>
+                        <input type="text" id="firstName" placeholder="Enter your first name">
+                        <span class="errorMsg" id="firstNameError">Please enter your first name.</span>
+                    </div>
+
+                    <div class="formGroup">
+                        <label for="lastName">Last Name <span class="required">*</span></label>
+                        <input type="text" id="lastName" placeholder="Enter your last name">
+                        <span class="errorMsg" id="lastNameError">Please enter your last name.</span>
+                    </div>
+
+                    <div class="formGroup">
+                        <label for="dob">Date of Birth <span class="required">*</span></label>
+                        <input type="date" id="dob">
+                        <span class="errorMsg" id="dobError">Please enter your date of birth.</span>
+                    </div>
+
+                    <div class="formGroup">
+                        <label for="gender">Gender <span class="required">*</span></label>
+                        <select id="gender">
+                            <option value="">-- Select --</option>
+                            <option value="male">Male</option>
+                            <option value="female">Female</option>
+                            <option value="other">Other</option>
+                        </select>
+                        <span class="errorMsg" id="genderError">Please select your gender.</span>
+                    </div>
+
+                    <div class="formGroup">
+                        <label for="phone">Phone Number <span class="required">*</span></label>
+                        <input type="tel" id="phone" placeholder="07X XXX XXXX">
+                        <span class="errorMsg" id="phoneError">Please enter a valid phone number.</span>
+                    </div>
+
+                    <div class="formGroup">
+                        <label for="email">Email Address <span class="required">*</span></label>
+                        <input type="email" id="email" placeholder="example@email.com">
+                        <span class="errorMsg" id="emailError">Please enter a valid email address.</span>
+                    </div>
+
+                    <div class="formGroup fullWidth">
+                        <label for="address">Home Address</label>
+                        <input type="text" id="address" placeholder="No., Street, City">
+                    </div>
+                </div>
+
+                <div class="btnRow">
+                    <button class="btnNext" onclick="goToStep(2)">Next →</button>
+                </div>
+            </div>
+
+            <!-- Step 2: Select Disease / Specialty -->
+            <div class="formStep hidden" id="step2">
+                <h2 class="stepTitle">Select Your Concern</h2>
+                <p class="stepSubtitle">Choose the health area you need help with.</p>
+
+                <div class="formGroup">
+                    <label for="disease">Disease / Condition <span class="required">*</span></label>
+                    <select id="disease" onchange="updateDoctors()">
+                        <option value="">-- Select a condition --</option>
+                        <option value="cardiology">Heart Disease (Cardiology)</option>
+                        <option value="dermatology">Skin Issues (Dermatology)</option>
+                        <option value="neurology">Headaches / Neurology</option>
+                        <option value="orthopedics">Bone & Joint (Orthopedics)</option>
+                        <option value="pediatrics">Child Health (Pediatrics)</option>
+                        <option value="general">General Checkup</option>
+                    </select>
+                    <span class="errorMsg" id="diseaseError">Please select a condition.</span>
+                </div>
+
+                <div class="formGroup">
+                    <label for="appointmentDate">Preferred Date <span class="required">*</span></label>
+                    <input type="date" id="appointmentDate">
+                    <span class="errorMsg" id="dateError">Please select a date.</span>
+                    <span class="helperText" id="todayDisplay"></span>
+                </div>
+
+                <div class="formGroup">
+                    <label for="appointmentTime">Preferred Time <span class="required">*</span></label>
+                    <select id="appointmentTime">
+                        <option value="">-- Select a time slot --</option>
+                        <option value="08:00">08:00 AM</option>
+                        <option value="09:00">09:00 AM</option>
+                        <option value="10:00">10:00 AM</option>
+                        <option value="11:00">11:00 AM</option>
+                        <option value="14:00">02:00 PM</option>
+                        <option value="15:00">03:00 PM</option>
+                        <option value="16:00">04:00 PM</option>
+                    </select>
+                    <span class="errorMsg" id="timeError">Please select a time.</span>
+                </div>
+
+                <div class="formGroup">
+                    <label for="notes">Additional Notes</label>
+                    <textarea id="notes" placeholder="Describe your symptoms or any extra details..."></textarea>
+                </div>
+
+                <div class="btnRow">
+                    <button class="btnBack" onclick="goToStep(1)">← Back</button>
+                    <button class="btnNext" onclick="goToStep(3)">Next →</button>
+                </div>
+            </div>
+
+            <!-- Step 3: Choose Doctor -->
+            <div class="formStep hidden" id="step3">
+                <h2 class="stepTitle">Choose Your Doctor</h2>
+                <p class="stepSubtitle">Available doctors based on your selected condition.</p>
+
+                <div class="doctorList" id="doctorList">
+                    <!-- Doctors are populated by JavaScript -->
+                </div>
+
+                <span class="errorMsg" id="doctorError" style="display:block; text-align:center; margin-bottom:15px;">Please select a doctor.</span>
+
+                <div class="btnRow">
+                    <button class="btnBack" onclick="goToStep(2)">← Back</button>
+                    <button class="btnNext" onclick="goToStep(4)">Next →</button>
+                </div>
+            </div>
+
+            <!-- Step 4: Confirm -->
+            <div class="formStep hidden" id="step4">
+                <h2 class="stepTitle">Confirm Your Appointment</h2>
+                <p class="stepSubtitle">Please review your details before submitting.</p>
+
+                <div class="summaryBox" id="summaryBox">
+                    <!-- Summary filled by JS -->
+                </div>
+
+                <div class="formGroup checkboxGroup">
+                    <input type="checkbox" id="agreeTerms">
+                    <label for="agreeTerms">I confirm that the above information is correct.</label>
+                    <span class="errorMsg" id="termsError">Please confirm your details.</span>
+                </div>
+
+                <div class="btnRow">
+                    <button class="btnBack" onclick="goToStep(3)">← Back</button>
+                    <button class="btnSubmit" onclick="submitForm()">Confirm Appointment ✓</button>
+                </div>
+            </div>
+
+            <!-- Success Message -->
+            <div class="formStep hidden" id="stepSuccess">
+                <div class="successBox">
+                    <div class="successIcon">✓</div>
+                    <h2>Appointment Booked!</h2>
+                    <p id="successMessage"></p>
+                    <p class="successNote">A confirmation will be sent to your email. Please arrive 10 minutes early.</p>
+                    <button class="btnNext" onclick="resetForm()">Book Another Appointment</button>
+                </div>
+            </div>
+
+        </div>
+        <!-- End of Form Container -->
+
+        <!-- Footer -->
+        <footer class="footer">
+            <div class="footerColumn">
+                <h3 class="footerTitle">E-Channeling</h3>
+                <p class="footerText">Comprehensive healthcare management at your fingertips. Book your specialist appointments instantly and securely.</p>
+            </div>
+
+            <div class="footerColumn">
+                <h3 class="footerTitle">Contact</h3>
+                <a href="contact.html" class="footerLink">Contact Us →</a>
+            </div>
+
+            <div class="footerBottom">
+                <p>&copy; 2026 E-Channeling. All rights reserved.</p>
+            </div>
+        </footer>
+
+        <script src="register.js"></script>
+    </body>
+</html>
